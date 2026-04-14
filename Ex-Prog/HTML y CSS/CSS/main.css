@@ -1,0 +1,92 @@
+*{
+    margin: 1px;
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+/* BASE (MÓVIL) */
+h1{
+    text-align: start;
+    animation-name: desplazamiento;
+    animation-timing-function: ease-in-out;
+    animation-duration: 8s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite
+      
+}
+
+header{
+    text-align: center;
+    font-size: x-large;
+}
+
+.navegacion{
+    position: sticky;
+    top: 0;
+    background-color: gray;
+    text-align: center;
+    width: 100%;
+    transition: background-color 1s ease;
+}
+
+.container{
+    display: block;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    width:100%;
+    max-width:100%;
+    height: auto;
+}
+
+picture{
+    display: flex;
+    width:100%;
+    max-width: 100%;
+    height: auto; 
+}
+
+.footer{
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 768px){
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    
+    
+    }
+
+    .imagen1{
+        grid-column: 1/2;
+    }
+
+    .imagen2{
+        grid-column: 2/-1;
+    }
+}
+
+/* TRANSICIONES, TRANSFORMACIONES Y ANIMACIONES */
+@keyframes desplazamiento{
+        from{
+            transform: translate(0,0);
+        }
+        
+        to{
+            transform: translate(99%, 0);
+        }
+    }
+
+.navegacion:hover{
+    background-color: transparent;
+}
+
+.publicidad> h3:hover{
+    transform: scale(1.5);
+    
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO HTML + CSS</title>
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Primera Página Web</h1>
+        <p>Esta es una simple página web para practicar HTML y CSS.</p>
+    </header>
+    <nav class="navegacion">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Sobre mi</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            
+            <picture class="imagen1">
+                <source media="(min-width:992px)" srcset="assets/cerveza_992px.jpg">
+                <img src="assets/cerveza_768px.jpg" alt="Imagen de una cerveza">
+            </picture>
+            <picture class="imagen2">
+                <source media="(min-width:992px)" srcset="assets/reloj_992px.jpg">
+                <img src="assets/reloj_768px.jpg" alt="Imagen de una reloj">
+            </picture>
+            <section class="contenido">
+              <h2>Mi primer contenido</h2>
+              <p>Este es el primer contenido de mi página web. No pretendo que sea muy extenso ni tampoco muy profundo, solo necesito que cumpla su funcion de ocupar espacio en la página, para serciorarme de que aplico el resto de mis conocimientos de forma adecuada.</p> <br>
+              <p>Este segundo párrafo es para contar un poco mi experiencia aprendiendo a programar. Ha sido un camino de mucha icertidumbre pues muchas veces la informátrica no va relacionada a un razonamiento lógico. más bien va ligada a la resolución de problemas a través de soluciones prácticas. las cuales solo funcionan siguiendo la lógica específica de un leguaje de programación.</p><br>
+              <p>Espero que este ejercicio me ayude a mejorar mis conociminetos en cuanto a los fundamentos del HTML y CSS, esto será un punto clave para poder avanzar a aprender Javascript con unas bases más sólidas en los otros 2 leguajes básicos de la programación.</p><br>
+              <p>Con suerte, esta página web quedará como un recuerdo de mis inicios en lo que significó la profesión de mi vida.</p>
+             <form action="#" method="post" autocomplete="off" id="formulario" name="formulario" class="formulario">
+                  <fieldset>
+                      <legend>Formulario de contacto</legend>
+
+                      <label for="nombre">Nombre:</label>
+                      <input type="text" id="nombre" name="nombre" placeholder="Ejemplo: Mauricio" required autofocus><br>
+
+                     <label for="edad">Edad:</label>
+                      <input type="number" id="edad" name="edad" max="99" placeholder="Ejemplo: 18" required><br>
+
+                      <label for="email">Correo electrónico:</label>
+                      <input type="email" id="email" name="email" placeholder="Ejemplo: mauricio@example.com" required><br>
+
+                      <label for="comment">Comentarios:</label>
+                     <textarea id="comment" name="comment" placeholder="Ejemplo: Tengo algunas preguntas..."></textarea><br>
+                     </fieldset>
+
+                  <label for="submit">Enviar</label>
+                  <input type="submit" id="submit" name="submit" required><br>
+
+                 <label for="reset">Restablecer</label>
+                 <input type="reset" id="reset" name="reset" required>
+             </form>       
+         </section>
+         <aside class="publicidad">
+              <h3>Publicidad</h3>
+                <p>Este es un espacio para publicidad.</p>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ipsa tempora pariatur accusantium tenetur excepturi ad voluptatem! Illo labore libero veritatis quaerat! Saepe sequi dolorum molestiae. At magni dolore nulla ipsum error tempora, porro hic quidem dolorum rem deleniti aliquid. Quidem incidunt unde iure vero quasi harum similique cumque eius.</p>
+            </aside>
+        </div>
+        
+    </main>
+    <footer class="footer">
+            <p>Información de contacto</p><br>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, impedit saepe molestias laudantium vitae doloremque labore quis non architecto ipsam reprehenderit nihil tempore! Nobis eum laboriosam esse autem earum culpa.</p>
+        </footer>
+</body>
+</html>
