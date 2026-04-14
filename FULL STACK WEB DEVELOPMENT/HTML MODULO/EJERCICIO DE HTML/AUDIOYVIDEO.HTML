@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head> 
+        <meta charset="UTF-8">
+        <title>EJERCICIO FINAL MÓDULO HTML</title>
+    </head>
+    <body>
+     <header>
+        <a href="INDEX.HTML">EJERCICIO FINAL MÓDULO HTML</a>
+     </header> 
+     <main>
+
+    <section>
+      <h2>Vídeo y Audio en HTML</h2>
+      <p>
+        HTML permite insertar contenido multimedia como vídeos y audios
+        directamente en una página web mediante las etiquetas
+        <strong>&lt;video&gt;</strong> y <strong>&lt;audio&gt;</strong>,
+        sin necesidad de plugins externos.
+      </p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Vídeo en HTML</h2>
+      <p>
+        La etiqueta <strong>&lt;video&gt;</strong> se utiliza para reproducir
+        vídeos alojados dentro del propio proyecto.
+      </p>
+
+      <article>
+        <h3>Ejemplo de vídeo local</h3>
+
+        <video controls width="400">
+          <source src="ASSETS/AUDIOSYVIDEOS/VIDEO1.mp4" type="video/mp4" controls autoplay>
+          Tu navegador no soporta la etiqueta video.
+        </video>
+
+        <p>
+          Este vídeo se carga desde un archivo local usando la etiqueta
+          <strong>&lt;video&gt;</strong> con controles de reproducción.
+        </p>
+      </article>
+
+      <article>
+        <h3>Ejemplo de vídeo desde YouTube</h3>
+
+        <iframe
+        src="https://www.youtube.com/embed/LXb3EKWsInQ?si=TJhz3FfMzIxVS2Yv"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+        </iframe>
+
+        <p>
+          Este vídeo se inserta desde YouTube utilizando un
+          <strong>iframe</strong>, que permite incrustar contenido externo.
+        </p>
+      </article>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Audio en HTML</h2>
+      <p>
+        La etiqueta <strong>&lt;audio&gt;</strong> se utiliza para reproducir
+        archivos de sonido directamente desde el navegador.
+      </p>
+
+      <article>
+        <h3>Ejemplo de audio local</h3>
+
+        <audio controls>
+          <source src="ASSETS/AUDIOSYVIDEOS/AUDIO1.mp3" type="audio/mp3" controls>
+          Tu navegador no soporta la etiqueta audio.
+        </audio>
+
+        <p>
+          Este audio se reproduce desde un archivo local utilizando la etiqueta
+          <strong>&lt;audio&gt;</strong> con controles.
+        </p>
+      </article>
+
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Buenas prácticas en vídeo y audio</h2>
+      <ul>
+        <li>Usar siempre el atributo <strong>controls</strong></li>
+        <li>Proporcionar mensajes alternativos si el navegador no soporta el contenido</li>
+        <li>Optimizar archivos multimedia para la web</li>
+        <li>Usar <strong>iframe</strong> solo para contenido externo</li>
+        <li>No reproducir audio o vídeo automáticamente sin permiso del usuario</li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+</html>

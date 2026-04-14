@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head> 
+        <meta charset="UTF-8">
+        <title>EJERCICIO FINAL MÓDULO HTML</title>
+    </head>
+    <body>
+      <link rel="stylesheet" href="CSS/formularios.css">
+     <header>
+        <a href="INDEX.HTML">EJERCICIO FINAL MÓDULO HTML</a>
+     </header>
+     <main>
+        <section>
+          <h2>Formularios en HTML</h2>
+          <p>
+            Los formularios en HTML permiten a los usuarios enviar datos al servidor.
+            Se pueden crear utilizando la etiqueta <strong>&lt;form&gt;</strong> y varios elementos de formulario como
+            <strong>&lt;input&gt;</strong>, <strong>&lt;textarea&gt;</strong> y <strong>&lt;button&gt;</strong>.
+          </p>
+
+          <h3>Ejemplo de formulario</h3>
+          <form action="/submit" method="POST">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+     </main>
+</body>
+</html>

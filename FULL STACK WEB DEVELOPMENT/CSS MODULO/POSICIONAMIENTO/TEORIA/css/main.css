@@ -1,0 +1,29 @@
+.contenedor{
+        border:2px solid black;
+}
+
+.uno{
+    background-color: red;
+    position:absolute;
+    top: 10px;
+    left: 10px;
+    /*Cuandop usamos position:fixed; el elemento se posiciona de manera fija con respecto a la ventana del navegador. No se mueve al hacer scroll y permanece en la misma posición en la pantalla.*/ 
+    /*Cuando usamos position:absolute; el elemento se posiciona de manera absoluta con respecto a su contenedor más cercano que tenga una posición relativa, absoluta o fija. Si no hay ningún contenedor con estas características, se posiciona con respecto al documento. El elemento se saca del flujo normal del documento, lo que significa que no ocupa espacio y puede superponerse a otros elementos.*/
+    /*Cuando usamos position:relative; el elemento se posiciona de acuerdo al flujo normal del documento, pero podemos ajustar su posición utilizando las propiedades top, right, bottom o left. El espacio que ocupa el elemento en el flujo del documento se mantiene, incluso si lo movemos visualmente.*/
+    /*Cuando usamos position:static; el elemento se posiciona de acuerdo al flujo normal del documento, es decir, se coloca en el orden en que aparece en el HTML. No se ve afectado por las propiedades top, right, bottom o left.*/
+    /*Cuando usamos position:sticky; el elemento se comporta como un elemento relativo hasta que alcanza un punto específico en la pantalla, momento en el cual se vuelve fijo. Esto es útil para crear efectos de navegación o encabezados que permanecen visibles mientras se desplaza la página.*/
+}
+
+.dos{background-color: blue;
+}
+
+.Barra-Superior{
+    font-size: 3rem;
+    width:100%;
+    background-color: darkgreen;
+    padding:10px;
+    position:fixed;
+    opacity: 0.9;
+    z-index: 10;
+    /*El z-index es una propiedad de CSS que se utiliza para controlar el orden de apilamiento de los elementos en una página web. Cuanto mayor sea el valor del z-index, más arriba estará el elemento en la pila de elementos. Un elemento con un z-index más alto se mostrará por encima de los elementos con un z-index más bajo. Es importante tener en cuenta que el z-index solo funciona en elementos que tienen una posición establecida (relative, absolute, fixed o sticky).*/
+}

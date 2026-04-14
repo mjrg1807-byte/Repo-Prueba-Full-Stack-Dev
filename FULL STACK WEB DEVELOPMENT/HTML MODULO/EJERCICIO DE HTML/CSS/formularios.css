@@ -1,0 +1,9 @@
+input[type="text"] {
+    color:blue;
+}
+input[type="email"] {
+    color:aqua;
+}
+textarea[name="message"] {
+    color:lime;
+}

@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.padre{
+    border: 3px solid black;
+    width: 600px;
+    height: 500px;
+}
+
+.caja1 {
+    font-size: 2rem;
+    background-color: blue;
+    width: 100vw;
+    height:50vw;
+    /*Cuando se usa el vmin o vmax, el porcentaje es con respecto a la ventana del navegador, no al elemento padre (vmin hace referencia al minimo y vmax al máximo)*/
+    /*Cuando se usa el vw o vh, el porcentaje es con respecto a la ventana del navegador, no al elemento padre*/
+    /*Cuando se usa el porcentaje siempre es con respecto al elemento padre, en este caso el body, que es el que tiene el 100% del ancho de la pantalla*/
+}

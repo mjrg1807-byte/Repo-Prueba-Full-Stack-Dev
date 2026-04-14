@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas De Medida</title>
+    
+</head>
+<body>
+  <h2>Unidades flexibles en CSS</h2>
+
+  <p>
+    Las unidades flexibles permiten que los elementos se adapten a diferentes tamaños de pantalla.
+    Son fundamentales para crear diseños responsive.
+  </p>
+
+  <article>
+    <h3>¿Por qué no usar solo px?</h3>
+    <p>
+      Los píxeles (px) son unidades fijas, lo que significa que no se adaptan al tamaño de la pantalla.
+      Esto puede provocar que la web se vea mal en dispositivos móviles.
+    </p>
+  </article>
+
+  <article>
+    <h3>Unidades más utilizadas</h3>
+    <ul>
+      <li><strong>%</strong>: relativo al tamaño del contenedor padre</li>
+      <li><strong>vw</strong>: porcentaje del ancho de la pantalla</li>
+      <li><strong>vh</strong>: porcentaje del alto de la pantalla</li>
+      <li><strong>rem</strong>: relativo al tamaño de fuente del elemento raíz</li>
+      <li><strong>em</strong>: relativo al tamaño de fuente del elemento padre</li>
+    </ul>
+  </article>
+
+  <article>
+    <h3>Ejemplos</h3>
+
+    <pre>
+.contenedor {
+  width: 100%;
+}
+
+.caja {
+  width: 50%;
+}
+
+.texto {
+  font-size: 1.2rem;
+}
+
+.pantalla {
+  width: 100vw;
+  height: 100vh;
+}
+    </pre>
+
+    <p>
+      Estos valores permiten que los elementos se adapten automáticamente al tamaño de la pantalla.
+    </p>
+  </article>
+
+  <article>
+    <h3>Buenas prácticas</h3>
+    <ul>
+      <li>Usar % para layouts</li>
+      <li>Usar rem para textos</li>
+      <li>Usar vw/vh para dimensiones de pantalla</li>
+      <li>Evitar usar solo px en diseños responsive</li>
+    </ul>
+  </article>
+
+</body>

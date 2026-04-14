@@ -1,0 +1,17 @@
+.grande{
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    font-size: 3rem;
+}
+
+.pequeno{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    font-size: 1rem;
+}
+
+.redondo{
+    border-radius: 50px;
+}

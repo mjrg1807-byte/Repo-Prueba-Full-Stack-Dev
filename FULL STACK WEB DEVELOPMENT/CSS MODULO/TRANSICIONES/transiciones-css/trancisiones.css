@@ -1,0 +1,65 @@
+.box{
+    width:100px;
+    height:100px;
+    background-color: red;
+
+/*--TRANSICIONES--*/
+
+    transition: background-color 2s 2s ease;
+    /* transition es la propiedad que se encarga de hacer la transición, el primer valor es la propiedad a la que se le va a aplicar la transición, el segundo valor es el tiempo que va a durar la transición, el tercer valor es el tiempo que va a tardar en empezar la transición y el cuarto valor es la función de tiempo que se va a aplicar a la transición */
+    /* En este caso hemos aplcado la transicion a la proiedad background color, si queremos aplicar la transicion a todas las propiedades, podemos usar el valor all */
+    /* Si quisieramos aplicar la transicion a varias propiedades, podemos separarlas por comas, por ejemplo: transition: background-color 2s ease, width 1s ease; */
+}
+
+.box2{
+    width:100px;
+    height:100px;
+    background-color: blue;
+
+/*--TRANSFORMACIONES--*/
+
+    transform: translate(150px, 100px)
+    /* transform es la propiedad que se encarga de hacer las transformaciones, el primer valor es la función de transformación que se va a aplicar, el segundo valor es el valor que se le va a aplicar a la función de transformación */
+    /* En este caso hemos aplicado la transformación translate, que se encarga de desplazar el elemento (eje x, eje y), si queremos aplicar la transformación a todas las funciones de transformación, podemos usar el valor all */
+    /* Si quisieramos aplicar varias transformaciones, podemos separarlas por espacios, por ejemplo: transform: scale(1.5) rotate(45deg); */
+}
+
+.box3{
+    width:100px;
+    height:100px;
+    background-color: green;
+
+    animation-name: despalzamiento;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    /*En este caso hemos aplicado la animación desplazamiento, la cual hemos creado y definido sus valores en cada etapa. Luego con la propiedad animation-duration le hemos dado un tiempo de duración a la animación, el cual es de 4 segundos, y con la propiedad animation-timing-function le hemos dado una función de tiempo a la animación, en este caso hemos usado la función ease-in-out, la cual hace que la animación empiece y termine lentamente, y en el medio tenga una velocidad normal. */
+    animation-delay: 2s;
+    /*Con la propiedad animation-delay le hemos dado un tiempo de retraso a la animación, en este caso hemos dado un retraso de 2 segundos, lo que significa que la animación empezará a ejecutarse después de 2 segundos de haber cargado la página. */
+    animation-iteration-count: 4;
+    /*Con la propiedad animation-iteration-count le hemos dado un número de iteraciones a la animación, en este caso hemos dado un número de iteraciones de 4, lo que significa que la animación se ejecutará 4 veces, y luego se detendrá. Si queremos que la animación se ejecute infinitamente, podemos usar el valor infinite. */
+    animation-direction: normal;
+    /*Con la propiedad animation-direction le hemos dado una dirección a la animación, en este caso hemos dado una dirección normal, lo que significa que la animación se ejecutará en el orden normal, es decir, de 0% a 100%. Si queremos que la animación se ejecute en el orden inverso, podemos usar el valor reverse, lo que significa que la animación se ejecutará de 100% a 0%. Si queremos que la animación se ejecute en ambos sentidos, podemos usar el valor alternate, lo que significa que la animación se ejecutará de 0% a 100%, luego de 100% a 0%, luego de 0% a 100%, y así sucesivamente. */
+}
+
+/*--ANIMACIONES--*/
+    @keyframes despalzamiento{
+        0%{
+            transform: translate(0,0);
+        }
+        50%{
+            transform: translate(75px, 50px);
+        }
+        75%{
+            transform: translate(150px, 100px);
+        }
+        100%{
+            transform: translate(200px, 150px);
+        }
+    }
+        /*Si nuestra animación tiene varias etapas, podemos usar los porcentajes para definir cada etapa de la animación, el 0% es el estado inicial de la animación, el 100% es el estado final de la animación, y los valores intermedios son las etapas intermedias de la animación*/
+        /*SI nuestra animación solo tiene dos etapas, podemos usar los valores from y to en lugar de los porcentajes, el valor from es el estado inicial de la animación, y el valor to es el estado final de la animación*/
+
+.box:hover{
+    background-color: pink;
+    width:200px;
+}

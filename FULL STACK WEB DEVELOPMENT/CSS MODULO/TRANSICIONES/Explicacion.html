@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transiciones, transformacionesy y animaciones</title>
+</head>
+<body>
+
+    <section>
+  <h2>Transiciones, Transformaciones y Animaciones en CSS</h2>
+
+  <p>
+    Estas propiedades permiten cambiar el estado de los elementos en el tiempo,
+    creando efectos visuales dinámicos y mejorando la experiencia de usuario.
+  </p>
+
+  <!-- IDEA GENERAL -->
+  <article>
+    <h3>Idea general</h3>
+    <ul>
+      <li><strong>Transition:</strong> cambio suave entre dos estados</li>
+      <li><strong>Transform:</strong> modifica forma o posición</li>
+      <li><strong>Animation:</strong> animaciones complejas con varios pasos</li>
+    </ul>
+  </article>
+
+  <hr>
+
+  <!-- TRANSITIONS -->
+  <article>
+    <h3>Transitions</h3>
+    <p>
+      Permiten suavizar los cambios entre un estado inicial y uno final.
+      Normalmente se usan con eventos como <code>:hover</code>.
+    </p>
+
+    <pre>
+.caja {
+  background: blue;
+  transition: 0.5s;
+}
+
+.caja:hover {
+  background: red;
+}
+    </pre>
+
+    <h4>Sintaxis</h4>
+    <pre>
+transition: propiedad duración tipo delay;
+    </pre>
+
+    <h4>Tipos de transición</h4>
+    <ul>
+      <li>ease (suave)</li>
+      <li>linear (constante)</li>
+      <li>ease-in (empieza lento)</li>
+      <li>ease-out (termina lento)</li>
+    </ul>
+  </article>
+
+  <hr>
+
+  <!-- TRANSFORM -->
+  <article>
+    <h3>Transform</h3>
+    <p>
+      Permite modificar visualmente un elemento sin afectar el flujo del documento.
+    </p>
+
+    <h4>Tipos principales</h4>
+
+    <pre>
+transform: translateX(100px); /* mover */
+transform: scale(1.5);       /* agrandar */
+transform: rotate(45deg);    /* rotar */
+transform: skew(10deg);      /* inclinar */
+    </pre>
+
+    <h4>Ejemplo con hover</h4>
+    <pre>
+.caja:hover {
+  transform: scale(1.2);
+}
+    </pre>
+  </article>
+
+  <hr>
+
+  <!-- TRANSFORM + TRANSITION -->
+  <article>
+    <h3>Transform + Transition</h3>
+    <p>
+      Combinar ambas permite crear animaciones suaves sin necesidad de usar animation.
+    </p>
+
+    <pre>
+.caja {
+  transition: 0.3s;
+}
+
+.caja:hover {
+  transform: scale(1.2);
+}
+    </pre>
+  </article>
+
+  <hr>
+
+  <!-- ANIMATIONS -->
+  <article>
+    <h3>Animations</h3>
+    <p>
+      Permiten crear animaciones más complejas mediante varios estados definidos.
+    </p>
+
+    <h4>Crear animación</h4>
+    <pre>
+@keyframes mover {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
+    </pre>
+
+    <h4>Aplicar animación</h4>
+    <pre>
+.caja {
+  animation: mover 2s infinite;
+}
+    </pre>
+
+    <h4>Propiedades importantes</h4>
+    <ul>
+      <li>infinite (repetición infinita)</li>
+      <li>alternate (ida y vuelta)</li>
+      <li>forwards (mantiene estado final)</li>
+    </ul>
+  </article>
+
+  <hr>
+
+  <!-- DIFERENCIAS -->
+  <article>
+    <h3>Diferencias clave</h3>
+    <ul>
+      <li>Transition → necesita interacción (hover)</li>
+      <li>Animation → funciona automáticamente</li>
+      <li>Transition → simple</li>
+      <li>Animation → compleja</li>
+    </ul>
+  </article>
+
+  <hr>
+
+  <!-- EJEMPLO -->
+  <article>
+    <h3>Ejemplo práctico</h3>
+    <pre>
+.boton {
+  background: blue;
+  transition: 0.3s;
+}
+
+.boton:hover {
+  transform: scale(1.1);
+  background: red;
+}
+    </pre>
+  </article>
+
+  <hr>
+
+  <!-- CONSEJO -->
+  <article>
+    <h3>Consejo importante</h3>
+    <p>
+      Es mejor usar <code>transform</code> en lugar de propiedades como top o left,
+      ya que es más eficiente y mejora el rendimiento.
+    </p>
+
+    <pre>
+/* Evitar */
+top: 20px;
+
+/* Recomendado */
+transform: translateY(20px);
+    </pre>
+  </article>
+
+</section>
+   
+
+
+
+</body>
+</html>

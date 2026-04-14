@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Guía CSS Grid</title>
+</head>
+<body>
+
+  <header>
+    <h1>Guía rápida de CSS Grid</h1>
+    <p>Explicación sencilla para entender CSS Grid desde cero</p>
+  </header>
+
+  <main>
+
+    <!-- INTRODUCCIÓN -->
+    <section>
+      <h2>¿Qué es CSS Grid?</h2>
+      <p>
+        CSS Grid es un sistema que permite organizar elementos en filas y columnas.
+        Es como crear una tabla invisible donde colocas los elementos de una página web.
+      </p>
+    </section>
+
+    <hr>
+
+    <!-- IDEA CLAVE -->
+    <section>
+      <h2>Idea clave</h2>
+      <p>
+        Grid divide la pantalla en bloques (como una cuadrícula) y te permite decidir
+        dónde colocar cada elemento y cuánto espacio ocupa.
+      </p>
+    </section>
+
+    <hr>
+
+    <!-- ACTIVAR GRID -->
+    <section>
+      <h2>1. Activar Grid</h2>
+      <pre>
+.contenedor {
+  display: grid;
+}
+      </pre>
+      <p>Convierte un contenedor en un sistema Grid.</p>
+    </section>
+
+    <hr>
+
+    <!-- COLUMNAS -->
+    <section>
+      <h2>2. Crear columnas</h2>
+      <pre>
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+      </pre>
+      <p>
+        Crea 2 columnas iguales. "fr" significa fracción del espacio disponible.
+      </p>
+    </section>
+
+    <hr>
+
+    <!-- EJEMPLO -->
+    <section>
+      <h2>Ejemplo de distribución</h2>
+      <pre>
+grid-template-columns: 1fr 2fr;
+      </pre>
+      <p>
+        La segunda columna ocupa el doble de espacio que la primera.
+      </p>
+    </section>
+
+    <hr>
+
+    <!-- COLOCACIÓN -->
+    <section>
+      <h2>3. Colocar elementos</h2>
+      <pre>
+.item {
+  grid-column: 1 / 3;
+}
+      </pre>
+      <p>
+        El elemento ocupa desde la columna 1 hasta la 3 (se expande).
+      </p>
+    </section>
+
+    <hr>
+
+    <!-- PROPIEDADES -->
+    <section>
+      <h2>Propiedades importantes</h2>
+
+      <article>
+        <h3>Contenedor (padre)</h3>
+        <ul>
+          <li>display: grid</li>
+          <li>grid-template-columns</li>
+          <li>grid-template-rows</li>
+          <li>gap</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Elementos (hijos)</h3>
+        <ul>
+          <li>grid-column</li>
+          <li>grid-row</li>
+        </ul>
+      </article>
+    </section>
+
+    <hr>
+
+    <!-- FLEX VS GRID -->
+    <section>
+      <h2>Diferencia entre Flexbox y Grid</h2>
+      <ul>
+        <li>Flexbox → una dirección (fila o columna)</li>
+        <li>Grid → dos dimensiones (filas y columnas)</li>
+        <li>Flexbox → más simple</li>
+        <li>Grid → más potente para layouts</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- CUANDO USAR -->
+    <section>
+      <h2>¿Cuándo usar Grid?</h2>
+      <ul>
+        <li>Diseño de páginas completas</li>
+        <li>Layouts con sidebar</li>
+        <li>Galerías</li>
+        <li>Dashboards</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- CONSEJO -->
+    <section>
+      <h2>Consejo clave</h2>
+      <p>Siempre piensa:</p>
+      <ul>
+        <li>¿Cuántas columnas necesito?</li>
+        <li>¿Cuántas filas?</li>
+        <li>¿Qué elemento ocupa más espacio?</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Guía CSS Grid - Apuntes personales</p>
+  </footer>
+
+</body>
+</html>

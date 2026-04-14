@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Guía Completa HTML - Apuntes Full Stack</title>
+</head>
+<body>
+
+  <!-- ================= CABECERA ================= -->
+  <header>
+    <h1>Guía completa de HTML</h1>
+    <p>Documento de consulta rápida para el módulo de HTML. Úsalo como referencia mientras programas.</p>
+  </header>
+
+  <hr>
+
+  <!-- ================= INTRODUCCIÓN ================= -->
+  <main>
+    <section>
+      <h2>¿Qué es HTML?</h2>
+      <p>
+        HTML (HyperText Markup Language) es el lenguaje que define la estructura
+        y el contenido de una página web. No es un lenguaje de programación.
+      </p>
+      <ul>
+        <li>Define estructura</li>
+        <li>Organiza contenido</li>
+        <li>Usa etiquetas semánticas</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- ================= ESTRUCTURA BÁSICA ================= -->
+    <section>
+      <h2>Estructura básica de un documento HTML</h2>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Título&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </pre>
+      <p>Siempre obligatoria. Sin esto el documento no es correcto.</p>
+    </section>
+
+    <hr>
+
+    <!-- ================= TEXTO ================= -->
+    <section>
+      <h2>Texto y formato</h2>
+      <article>
+        <h3>Títulos</h3>
+        <p>&lt;h1&gt; a &lt;h6&gt; (solo un h1 por página)</p>
+      </article>
+      <article>
+        <h3>Párrafos y énfasis</h3>
+        <ul>
+          <li>&lt;p&gt; párrafos</li>
+          <li>&lt;strong&gt; importancia</li>
+          <li>&lt;em&gt; énfasis</li>
+          <li>&lt;u&gt; subrayado visual</li>
+        </ul>
+      </article>
+    </section>
+
+    <hr>
+
+    <!-- ================= ENLACES ================= -->
+    <section>
+      <h2>Enlaces</h2>
+      <pre>
+&lt;a href="https://ejemplo.com" target="_blank"&gt;Enlace&lt;/a&gt;
+      </pre>
+      <p>Usa target="_blank" solo cuando sea necesario.</p>
+    </section>
+
+    <hr>
+
+    <!-- ================= IMÁGENES ================= -->
+    <section>
+      <h2>Imágenes</h2>
+      <article>
+        <pre>
+&lt;img src="ruta.jpg" alt="Descripción obligatoria"&gt;
+        </pre>
+        <p>El atributo alt es obligatorio por accesibilidad.</p>
+      </article>
+      <article>
+        <pre>
+&lt;figure&gt;
+  &lt;img src="foto.jpg" alt="Descripción"&gt;
+  &lt;figcaption&gt;Texto descriptivo&lt;/figcaption&gt;
+&lt;/figure&gt;
+        </pre>
+      </article>
+    </section>
+
+    <hr>
+
+    <!-- ================= LISTAS ================= -->
+    <section>
+      <h2>Listas</h2>
+      <ul>
+        <li>&lt;ul&gt; lista desordenada</li>
+        <li>&lt;ol&gt; lista ordenada</li>
+        <li>&lt;dl&gt; lista de definición</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- ================= TABLAS ================= -->
+    <section>
+      <h2>Tablas</h2>
+      <pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Título&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Dato&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+      </pre>
+    </section>
+
+    <hr>
+
+    <!-- ================= CONTENEDORES ================= -->
+    <section>
+      <h2>Contenedores</h2>
+      <article>
+        <h3>Div</h3>
+        <p>Contenedor genérico sin significado semántico.</p>
+      </article>
+      <article>
+        <h3>Etiquetas semánticas</h3>
+        <ul>
+          <li>&lt;header&gt;</li>
+          <li>&lt;nav&gt;</li>
+          <li>&lt;main&gt;</li>
+          <li>&lt;section&gt;</li>
+          <li>&lt;article&gt;</li>
+          <li>&lt;footer&gt;</li>
+        </ul>
+      </article>
+    </section>
+
+    <hr>
+
+    <!-- ================= FORMULARIOS ================= -->
+    <section>
+      <h2>Formularios</h2>
+      <article>
+        <pre>
+&lt;form&gt;
+  &lt;label for="nombre"&gt;Nombre&lt;/label&gt;
+  &lt;input type="text" id="nombre"&gt;
+&lt;/form&gt;
+        </pre>
+      </article>
+      <article>
+        <h3>Tipos de input importantes</h3>
+        <ul>
+          <li>text, number, email, password</li>
+          <li>radio, checkbox</li>
+          <li>date, time, color, range</li>
+          <li>submit, reset</li>
+        </ul>
+      </article>
+    </section>
+
+    <hr>
+
+    <!-- ================= MULTIMEDIA ================= -->
+    <section>
+      <h2>Vídeo y Audio</h2>
+      <article>
+        <pre>
+&lt;video controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+        </pre>
+      </article>
+      <article>
+        <pre>
+&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+        </pre>
+      </article>
+      <article>
+        <pre>
+&lt;iframe src="https://www.youtube.com/embed/ID" allowfullscreen&gt;&lt;/iframe&gt;
+        </pre>
+      </article>
+    </section>
+
+    <hr>
+
+    <!-- ================= CONSEJOS ================= -->
+    <section>
+      <h2>Consejos importantes</h2>
+      <ul>
+        <li>Usa siempre etiquetas semánticas</li>
+        <li>Indenta tu código</li>
+        <li>Usa alt en imágenes</li>
+        <li>Un solo h1 por página</li>
+        <li>No uses HTML para diseño</li>
+        <li>Piensa siempre en accesibilidad</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Guía HTML – Documento de referencia personal</p>
+  </footer>
+
+</body>
+</html>

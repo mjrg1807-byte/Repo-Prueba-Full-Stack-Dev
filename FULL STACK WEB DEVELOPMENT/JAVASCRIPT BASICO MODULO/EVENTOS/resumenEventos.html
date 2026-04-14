@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apuntes - Eventos en JavaScript</title>
+</head>
+<body>
+
+  <header>
+    <h1>Eventos en JavaScript</h1>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>¿Qué es un evento?</h2>
+
+      <p>
+        Un evento es una acción que ocurre en la página y que JavaScript puede detectar y gestionar.
+      </p>
+
+      <ul>
+        <li>Click en un botón</li>
+        <li>Escribir en un input</li>
+        <li>Pasar el ratón por un elemento</li>
+        <li>Cargar la página</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Estructura básica</h2>
+
+      <pre>
+elemento.addEventListener("evento", function() {
+  // código a ejecutar
+});
+      </pre>
+
+      <ul>
+        <li><strong>elemento:</strong> elemento del DOM</li>
+        <li><strong>evento:</strong> acción que se detecta</li>
+        <li><strong>función:</strong> lo que ocurre cuando se activa</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Ejemplo básico</h2>
+
+      <pre>
+&lt;button id="btn"&gt;Click&lt;/button&gt;
+
+let boton = document.getElementById("btn");
+
+boton.addEventListener("click", function() {
+  console.log("Has hecho click");
+});
+      </pre>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Eventos más comunes</h2>
+
+      <ul>
+        <li><strong>click</strong> → al hacer click</li>
+        <li><strong>mouseover</strong> → al pasar el ratón</li>
+        <li><strong>mouseout</strong> → al salir</li>
+        <li><strong>input</strong> → al escribir</li>
+        <li><strong>submit</strong> → en formularios</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Ejemplo con input</h2>
+
+      <pre>
+input.addEventListener("input", function() {
+  console.log(input.value);
+});
+      </pre>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Errores comunes</h2>
+
+      <h4>❌ Incorrecto</h4>
+      <pre>
+boton.addEventListener("click", saludar());
+      </pre>
+
+      <p>Esto ejecuta la función inmediatamente.</p>
+
+      <h4>✅ Correcto</h4>
+      <pre>
+boton.addEventListener("click", saludar);
+      </pre>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Funcionamiento</h2>
+
+      <ol>
+        <li>El usuario realiza una acción</li>
+        <li>Se dispara un evento</li>
+        <li>JavaScript lo detecta</li>
+        <li>Se ejecuta una función</li>
+        <li>El DOM puede cambiar</li>
+      </ol>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Ejemplo práctico</h2>
+
+      <pre>
+let boton = document.querySelector("button");
+
+boton.addEventListener("click", function() {
+  document.body.style.background = "blue";
+});
+      </pre>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Resumen</h2>
+
+      <ul>
+        <li>Evento → acción del usuario</li>
+        <li>addEventListener → escucha eventos</li>
+        <li>Función → ejecuta el código</li>
+        <li>Permite crear interactividad en la web</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Apuntes de JavaScript - Eventos</p>
+  </footer>
+
+</body>
+</html>

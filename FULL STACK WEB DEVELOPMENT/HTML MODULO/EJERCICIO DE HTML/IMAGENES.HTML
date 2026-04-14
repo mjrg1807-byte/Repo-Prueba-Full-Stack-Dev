@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head> 
+        <meta charset="UTF-8">
+        <title>EJERCICIO FINAL MÓDULO HTML</title>
+    </head>
+    <body>
+    <header>
+        <a href="INDEX.HTML">EJERCICIO FINAL MÓDULO HTML</a>
+     </header> 
+      <main>
+
+    <section>
+      <h2>Imágenes en HTML</h2>
+      <p>
+        En HTML, las imágenes se utilizan para mostrar contenido visual dentro
+        de una página web. Se insertan mediante la etiqueta <strong>img</strong>,
+        que es una etiqueta autocerrada.
+      </p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Etiqueta img</h2>
+      <p>
+        La etiqueta <strong>img</strong> se usa para insertar imágenes.
+        No tiene etiqueta de cierre y funciona mediante atributos.
+      </p>
+
+      <article>
+        <h3>Ejemplo básico de imagen</h3>
+
+        <img src="ASSETS/FOTOS/EJEMPLO1.jpg" alt="Descripción de ejemplo de una imagen">
+
+        <p>
+          El atributo <strong>src</strong> indica la ruta de la imagen, y
+          <strong>alt</strong> proporciona una descripción alternativa.
+        </p>
+      </article>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Atributos importantes de las imágenes</h2>
+
+      <ul>
+        <li><strong>src</strong>: ruta donde se encuentra la imagen</li>
+        <li><strong>alt</strong>: texto alternativo (obligatorio por accesibilidad)</li>
+        <li><strong>width</strong>: ancho de la imagen</li>
+        <li><strong>height</strong>: alto de la imagen</li>
+        <li><strong>title</strong>: texto que aparece al pasar el ratón</li>
+      </ul>
+
+      <article>
+        <h3>Ejemplo con atributos</h3>
+
+        <img 
+          src="ASSETS/FOTOS/EJEMPLO2.jpg"
+          alt="Ejemplo de imagen con atributos"
+          width="300"
+          title="Imagen de ejemplo"
+        >
+      </article>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Uso semántico con figure y figcaption</h2>
+      <p>
+        Cuando una imagen tiene un significado propio o necesita una explicación,
+        se recomienda usar las etiquetas <strong>&lt;figure&gt;</strong> y
+        <strong>&lt;figcaption&gt;</strong>.
+      </p>
+
+      <figure>
+        <img src="ASSETS/FOTOS/BICICLETA-ROJA.jpg" alt="Bicicleta urbana de color rojo">
+        <figcaption>
+          Imagen de una bicicleta urbana utilizada como ejemplo.
+        </figcaption>
+      </figure>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Rutas de imágenes</h2>
+
+      <article>
+        <h3>Ruta relativa</h3>
+        <p>
+          Se usa cuando la imagen está dentro del proyecto.
+        </p>
+        <img src="ASSETS/FOTOS/EJEMPLO3.jpg" alt="Imagen con ruta relativa">
+      </article>
+
+      <article>
+        <h3>Ruta absoluta</h3>
+        <p>
+          Se usa cuando la imagen está en internet.
+        </p>
+        <img src="https://es.wikipedia.org/wiki/Archivo:Tigre.jpg" alt="Imagen con ruta absoluta">
+      </article>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Accesibilidad en imágenes</h2>
+      <p>
+        El atributo <strong>alt</strong> es fundamental para personas con
+        discapacidad visual y para cuando la imagen no se puede cargar.
+      </p>
+      <p>
+        Si la imagen es solo decorativa, el atributo alt puede dejarse vacío:
+      </p>
+
+      <img src="ASSETS/FOTOS/EJEMPLO4.jpg" alt="EJEMPLO decorativo sin significado">
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Buenas prácticas al usar imágenes</h2>
+      <ul>
+        <li>Usar siempre el atributo <strong>alt</strong></li>
+        <li>No usar imágenes solo para texto</li>
+        <li>Optimizar el tamaño de las imágenes</li>
+        <li>Usar <strong>figure</strong> cuando la imagen tenga significado</li>
+        <li>No usar HTML para escalar imágenes grandes</li>
+      </ul>
+    </section>
+
+  </main>
+  </body>
+</html>

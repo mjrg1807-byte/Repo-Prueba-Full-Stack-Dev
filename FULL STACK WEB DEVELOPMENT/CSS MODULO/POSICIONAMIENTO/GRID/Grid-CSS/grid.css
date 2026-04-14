@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    /* Aqui estamos indicando que queremos 3 columnas de 200px cada una */
+    /*Tambien se puede hacer con porcentajes, por ejemplo: grid-template-columns: 30% 30% 30%; 
+    Otra opcion es usar fr (fractional units): grid-template-columns: 1fr 1fr 1fr; */
+
+    grid-template-rows: 100px 100px repeat(2, 1fr);
+    /*Cuando usamos repeat, estamos indicando que queremos repetir un valor un numero determinado de veces, en este caso queremos repetir 1fr dos veces, lo que nos da dos filas de igual tamaño que ocupan el espacio restante despues de las filas de 100px cada una */
+    /*Funciona igual que con las columnas, se pueden usar medidas fijas, porcentajes o fr */
+
+    gap: 20px;
+    /* El gap es el espacio entre las filas y columnas, en este caso estamos indicando que queremos un espacio de 20px entre cada fila y columna. Tambien se puede utilizar por separado column-gap y row-gap */
+
+
+    border: 2px solid black;
+    width: 500px auto;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.container >*{
+    border: 1px dotted black;
+    background-color: red;
+    font-size: 2rem;
+
+}
+
+.item1{
+    grid-column-start:1;
+    grid-column-end:3; /*Si ponemos -1 como valor, estamos indicando la posicion final, indistintamente del número de columnas existentes */
+
+/* El grid-column-start y grind-column-end indican los valores de las posiciones de incio y fin que ocupa el elemento seleccionado (Item1). Desde la columna 1 hasta la 3, es decir ocupa el espacio de 2 columnas*/
+
+}
+
+.item3{
+    grid-column:1 / -1;
+    /*El grid-column tambien puede abreviarse de esta manera, poniendo el valor de inicio, signo de division, y valor final */
+
+    grid-row: 2 / 4;
+    /* Con as filas funciona de la misma manera*/
+}

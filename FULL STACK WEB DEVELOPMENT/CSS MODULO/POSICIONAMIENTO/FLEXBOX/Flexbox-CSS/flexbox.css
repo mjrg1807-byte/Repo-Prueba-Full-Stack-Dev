@@ -1,0 +1,70 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+.flex-container  {
+  border: 2px solid black;
+  width: 80%;
+  margin: 50px auto;  
+  padding: 10px;
+
+
+  display: flex;
+  /*la propiedad display:flex; hace que el contenedor se comporte como un contenedor flex, lo que permite organizar sus elementos hijos de manera flexible y eficiente.*/
+  flex-direction: row;
+  /*la propiedad flex-direction: row; establece la dirección principal del eje en el contenedor flex. En este caso, los elementos hijos se organizarán en una fila horizontal, de izquierda a derecha.*/
+  flex-wrap: wrap;
+  /*la propiedad flex-wrap: wrap; indica que los elementos hijos pueden envolver a la siguiente línea si no hay suficiente espacio en el contenedor. Esto significa que los elementos se ajustarán automáticamente para ocupar el espacio disponible, creando múltiples filas si es necesario.*/
+  justify-content:flex-start;
+  /*la propiedad justify-content: ; se utiliza para alinear los elementos hijos a lo largo del eje principal (horizontal en este caso). Puedes usar valores como flex-start, flex-end, center, space-between, space-around, etc., para controlar la distribución de los elementos dentro del contenedor flex.*/
+  align-items:stretch;
+  /*la propiedad align-items: ; se utiliza para alinear los elementos hijos a lo largo del eje transversal (vertical en este caso). Puedes usar valores como flex-start, flex-end, center, baseline, stretch, etc., para controlar la alineación de los elementos dentro del contenedor flex.*/
+  align-content:flex-start ;
+  /*la propiedad align-content: ; se utiliza para alinear las líneas de elementos hijos dentro del contenedor flex cuando hay varias líneas. Puedes usar valores como flex-start, flex-end, center, space-between, space-around, stretch, etc., para controlar la distribución de las líneas dentro del contenedor flex.*/
+
+
+
+}
+
+.flex-container>* {
+  font-size: 5rem;
+  width: 100px;
+  border: 1px dotted black;
+  text-align: center;
+  padding: 10px;
+  background-color: red;
+  
+}
+
+.item1 {
+  order:1;
+  /*la propiedad order: ; se utiliza para controlar el orden de los elementos hijos dentro del contenedor flex. Puedes asignar un valor numérico a cada elemento para determinar su posición relativa en el flujo de los elementos. Los elementos con valores de orden más bajos aparecerán antes que los elementos con valores de orden más altos. Por defecto, todos los elementos tienen un valor de orden de 0, lo que significa que se mostrarán en el orden en que aparecen en el HTML.*/
+  flex-grow:2;
+  /*la propiedad flex-grow: ; se utiliza para controlar cómo los elementos hijos crecen para ocupar el espacio disponible en el contenedor flex. Puedes asignar un valor numérico a cada elemento para determinar cuánto espacio adicional debe ocupar en relación con los otros elementos. Un valor de 0 significa que el elemento no crecerá, mientras que un valor positivo indica cuánto espacio adicional debe ocupar en comparación con los otros elementos.*/
+  flex-shrink:1;
+  /*la propiedad flex-shrink: ; se utiliza para controlar cómo los elementos hijos se encogen para adaptarse al espacio disponible en el contenedor flex. Puedes asignar un valor numérico a cada elemento para determinar cuánto debe encogerse en relación con los otros elementos. Un valor de 0 significa que el elemento no se encogerá, mientras que un valor positivo indica cuánto debe encogerse en comparación con los otros elementos.*/
+  flex-basis:250px;
+  /*la propiedad flex-basis: ; se utiliza para establecer la base de tamaño inicial de un elemento hijo dentro del contenedor flex. Puedes asignar un valor específico (como píxeles, porcentajes, etc.) para determinar el tamaño inicial del elemento antes de que se apliquen las propiedades de crecimiento o encogimiento. Si no se especifica un valor, el tamaño inicial se basará en el contenido del elemento.*/
+  align-self:flex-end ;
+  /*la propiedad align-self: ; se utiliza para anular la alineación de un elemento hijo específico dentro del contenedor flex. Puedes asignar un valor como auto, flex-start, flex-end, center, baseline, stretch, etc., para controlar la alineación individual de ese elemento en relación con los demás elementos dentro del contenedor flex.*/
+
+}
+
+.item2 {
+  order:2;
+  flex-grow:1;
+  flex-shrink: 2;
+  flex-basis:250px;
+  align-self:flex-end ;
+ 
+}
+
+.item3 {
+  order:3;
+  flex: 2,2,250px;
+  /*la propiedad flex: ; es una forma abreviada de establecer las propiedades flex-grow, flex-shrink y flex-basis en un solo valor. Puedes asignar un valor numérico para controlar el crecimiento, encogimiento y tamaño base de un elemento hijo dentro del contenedor flex. Por ejemplo, flex: 1; es equivalente a flex-grow: 1; flex-shrink: 1; flex-basis: 0%;, lo que significa que el elemento crecerá para ocupar el espacio disponible, se encogerá si es necesario y no tendrá un tamaño base específico.*/
+  align-self:flex-end ;
+ 
+}

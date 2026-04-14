@@ -1,0 +1,159 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+a{
+        color: inherit; /* Hereda el color del elemento padre */
+        text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.cabecera,
+.navegacion,
+.seccion,
+.publi,
+.widget1,
+.widget2,
+.widget3,
+.galeria,
+.galeria>div,
+.pie{
+       /* border: 1px solid black; */
+        padding: 0px;
+     /*   margin: 20px; */
+}
+
+.container{
+    width: 100%;
+    margin:0px auto;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.widget3{
+        display: none;
+}
+
+.cabecera,
+.navegacion,
+.seccion,
+.publi,
+.pie{
+        grid-column:1/-1;
+}
+
+
+/*--GALERIA--*/
+.galeria{
+        display:flex;
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben en una sola fila */
+        gap:10px;
+        justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+
+.galeria>* {
+        width: 100%;
+}
+
+/*--NAVEGACION--*/
+.navegacion{
+        background-color: black;
+}
+
+.navegacion ul{
+        color: white;
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        font-size: 1.5rem;
+}
+
+
+.navegacion ul li a {
+        display:block;
+        width:100%;
+}
+
+/* --------------
+        768PX
+----------------- */
+
+@media screen and (min-width: 768px) {
+        .container{
+                grid-template-columns: repeat(3, 1fr);
+        }
+
+        .seccion{
+                grid-column:1/3;     
+        }
+
+        .publi{
+                grid-column:3/4;
+                grid-row:3/5;    
+        } 
+}
+
+/* --------------
+        992PX
+----------------- */
+
+@media screen and (min-width: 992px) {
+
+        .seccion{
+                grid-column:2/4;     
+        }
+
+        .publi{
+                grid-column:1/2;
+                    
+        } 
+
+        /*--GALERIA--*/
+        .galeria>* {
+        width: calc(50% - 10px); /* Ajusta el ancho de cada elemento para que quepan dos por fila, considerando el espacio entre ellos */
+        }
+
+        /*--NAVEGACION--*/
+        .navegacion ul{
+                flex-direction: row;
+                gap: 20px;
+        }
+}
+
+
+/* --------------
+        1200px
+----------------- */
+
+@media screen and (min-width: 1200px) {
+
+         .seccion{
+                grid-column:1/-1; 
+                grid-row:3/4;    
+        }
+
+        .publi{
+                grid-column:1/-1;
+                grid-row:4/5;    
+        } 
+
+        .widget3{
+                display: block;
+        }
+
+        
+}

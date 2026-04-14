@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividad</title>
+    
+</head>
+
+<!-- Enlaces de interés:
+https://www.w3schools.com/css/css_rwd_intro.asp
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+https://www.w3schools.com/css/css_rwd_viewport.asp 
+
+https://developer.mozilla.org/es/docs/Web/CSS/CSS_media_queries/Using_media_queries  -->
+
+<body>
+<section>
+  <h2>Responsividad en CSS</h2>
+
+  <p>
+    La responsividad consiste en hacer que una página web se adapte correctamente
+    a diferentes tamaños de pantalla, como móviles, tablets y ordenadores.
+  </p>
+
+  <p>
+    El objetivo es crear una única web que funcione bien en cualquier dispositivo.
+  </p>
+
+  <article>
+    <h3>Meta viewport</h3>
+    <p>
+      Es una etiqueta obligatoria en HTML para que la web se adapte correctamente
+      en dispositivos móviles.
+    </p>
+
+    <pre>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    </pre>
+  </article>
+
+  <article>
+    <h3>Unidades flexibles</h3>
+    <p>
+      Permiten que los elementos se adapten al tamaño de la pantalla.
+    </p>
+
+    <ul>
+      <li><strong>%</strong>: relativo al contenedor padre</li>
+      <li><strong>vw</strong>: ancho de la pantalla</li>
+      <li><strong>vh</strong>: alto de la pantalla</li>
+      <li><strong>rem</strong>: tamaño relativo al root</li>
+      <li><strong>em</strong>: tamaño relativo al padre</li>
+    </ul>
+  </article>
+
+  <article>
+    <h3>Diseño flexible</h3>
+    <p>
+      Se utiliza Flexbox o Grid para crear estructuras que se adapten automáticamente.
+    </p>
+
+    <pre>
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+}
+    </pre>
+  </article>
+
+  <article>
+    <h3>Media Queries</h3>
+    <p>
+      Permiten aplicar estilos diferentes según el tamaño de pantalla.
+    </p>
+
+    <pre>
+@media (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+    </pre>
+  </article>
+
+  <article>
+    <h3>Breakpoints</h3>
+    <ul>
+      <li>Móvil: menos de 768px</li>
+      <li>Tablet: entre 768px y 1024px</li>
+      <li>Desktop: más de 1024px</li>
+    </ul>
+  </article>
+
+  <article>
+    <h3>Ejemplo práctico</h3>
+    <p>
+      Adaptar un layout de escritorio a móvil:
+    </p>
+
+    <pre>
+@media (max-width: 768px) {
+  .contenedor {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+    </pre>
+  </article>
+
+  <article>
+    <h3>Imágenes responsive</h3>
+    <pre>
+img {
+  max-width: 100%;
+  height: auto;
+}
+    </pre>
+  </article>
+
+  <article>
+    <h3>Errores comunes</h3>
+    <ul>
+      <li>Usar solo px</li>
+      <li>No usar media queries</li>
+      <li>No probar en móvil</li>
+      <li>Diseños rígidos</li>
+    </ul>
+  </article>
+
+  <article>
+    <h3>Consejo clave</h3>
+    <p>
+      Diseña primero para móvil (Mobile First) y luego adapta a pantallas más grandes.
+    </p>
+
+    <pre>
+@media (min-width: 768px) {
+  /* estilos para pantallas grandes */
+}
+    </pre>
+  </article>
+
+</section>
+
+</body>
+</html>

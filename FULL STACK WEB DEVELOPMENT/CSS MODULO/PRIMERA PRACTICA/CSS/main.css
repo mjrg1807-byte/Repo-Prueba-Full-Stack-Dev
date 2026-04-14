@@ -1,0 +1,33 @@
+   h1{
+        color:yellow !important;
+    }
+    p{
+        color:red;
+    }
+    #productos-titulo{
+        color:blue;
+    }
+    .producto{
+        color:purple;
+    }
+    div>h4{
+        color:orange
+    }
+    li:nth-child(2){
+        color:darksalmon;
+    }
+    a:hover{
+        font-size:20px;
+    }
+    h2::before{
+        content:"NotaCSS";
+        color:gray;
+    }
+    h3::first-letter{
+        font-size:30px;
+        color:fuchsia;
+    }
+    a[target]{
+        color:firebrick;
+    }
+

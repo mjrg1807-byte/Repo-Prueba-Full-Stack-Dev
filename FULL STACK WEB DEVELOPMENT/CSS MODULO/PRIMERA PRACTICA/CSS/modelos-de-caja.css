@@ -1,0 +1,27 @@
+.content, .content2{
+width:500px;
+height:300px;
+
+/*padding: 20px: (FORMA GENERAL 4 LADOS)*/
+/*padding: 20px 30px: (FORMA HORIZONTAL Y VERTICAL)*/
+padding:20px 30px 20px 30px;
+margin:20px;
+
+border: 5px solid black;
+border-radius: 10px; /*BORDES REDONDEADOS*/
+
+/*(FORMA INDIVIDUAL PARA CADA TIPO DE VALOR DE BORDER)
+border-color: red black blue green; 
+border-width: 10px 5px 15px 20px;
+border-style: solid dashed dotted double;*/
+}
+
+.content{
+background-color:blue;
+box-sizing: border-box;
+}
+
+.content2{
+background-color:green;
+box-sizing: content-box;
+}

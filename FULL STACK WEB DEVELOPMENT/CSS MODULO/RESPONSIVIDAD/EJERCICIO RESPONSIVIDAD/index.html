@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Responsividad Mediaqueries</title>
+    <link rel="stylesheet" href="Ejercicio-Res-CSS/main.css">
+</head>
+
+<body>
+<div class="container">
+    <header class="cabecera">
+        <picture>
+            
+            <source media="(min-width:1200px)" srcset="assets/Banners/BICICLETA-ROJA-1920.jpg">
+            <source media="(min-width:992px)" srcset="assets/Banners/BICICLETA-ROJA-1200.jpg">
+            <source media="(min-width:768px)" srcset="assets/Banners/BICICLETA-ROJA-992.jpg">
+            <!--Al usar el elemento <source>, se especifica la imagen que se mostrará en función del ancho de la pantalla. Indicando el enlace de la imagen correspondiente en cada tamaño de pantalla -->
+            <img src="assets/Banners/BICICLETA-ROJA-768.jpg" alt="Bicicleta roja">
+        </picture>
+
+
+    </header>
+
+    <nav class="navegacion">
+        <ul>
+            <li> <a href="#">Home</a> </li>
+            <li> <a href="#">Servicios</a> </li>
+            <li> <a href="#">Acerca de</a> </li>
+            <li> <a href="#">Contacto</a> </li>
+        </ul>
+
+    </nav>
+
+    <section class="seccion">
+        <h1>titulo de la pagina</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+        
+        <div class="galeria">
+            <div><img src="assets/Fotos/EJEMPLO1.jpg" alt="Foto1"></div>
+            <div><img src="assets/Fotos/EJEMPLO2.jpg" alt="Foto2"></div>
+            <div><img src="assets/Fotos/EJEMPLO3.jpg" alt="Foto3"></div>
+            <div><img src="assets/Fotos/EJEMPLO4.jpg" alt="Foto4"></div>
+            
+        </div>
+
+    </section>
+
+    <aside class="publi">Publicidad</aside>
+
+    <aside class="widget1">Widget 1</aside>
+    <aside class="widget2">Widget 2</aside>
+    <aside class="widget3">Widget 3</aside>
+
+    <footer class="pie">Pie de pagina</footer>
+
+</div>
+
+</body>
+</html>

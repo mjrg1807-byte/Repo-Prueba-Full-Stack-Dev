@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJETOS LITERALES</title>
+    <link rel="stylesheet" href="">
+</head>
+        <!-- DOcumentación de interés:
+         https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Working_with_objects
+         https://developer.mozilla.org/es/docs/Learn/JavaScript/Objects/Basics  -->
+<body>
+<section>
+  <h2>Objetos en JavaScript</h2>
+
+  <p>
+    Un objeto es una estructura que permite almacenar datos relacionados en forma de clave y valor.
+    Se utiliza para representar entidades del mundo real como personas, productos o usuarios.
+  </p>
+
+  <article>
+    <h3>¿Qué es un objeto?</h3>
+
+    <pre>
+let persona = {
+  nombre: "Mauro",
+  edad: 25,
+  activo: true
+};
+    </pre>
+
+    <p>
+      Cada dato dentro del objeto se denomina propiedad.
+    </p>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Propiedades</h3>
+
+    <p>
+      Un objeto está formado por pares clave → valor.
+    </p>
+
+    <pre>
+nombre: "Mauro"
+    </pre>
+
+    <ul>
+      <li>Clave → nombre</li>
+      <li>Valor → "Mauro"</li>
+    </ul>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Diferencia entre Array y Objeto</h3>
+
+    <ul>
+      <li>Array → lista ordenada de valores</li>
+      <li>Objeto → conjunto de datos con significado</li>
+    </ul>
+
+    <pre>
+// Array
+let datos = ["Mauro", 25];
+
+// Objeto
+let persona = {
+  nombre: "Mauro",
+  edad: 25
+};
+    </pre>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Acceder a propiedades</h3>
+
+    <h4>Notación de punto</h4>
+    <pre>
+persona.nombre
+    </pre>
+
+    <h4>Notación de corchetes</h4>
+    <pre>
+persona["edad"]
+    </pre>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Modificar propiedades</h3>
+
+    <pre>
+persona.edad = 30;
+    </pre>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Añadir propiedades</h3>
+
+    <pre>
+persona.ciudad = "Madrid";
+    </pre>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Eliminar propiedades</h3>
+
+    <pre>
+delete persona.activo;
+    </pre>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Objetos complejos</h3>
+
+    <p>
+      Un objeto puede contener arrays u otros objetos.
+    </p>
+
+    <pre>
+let usuario = {
+  nombre: "Mauro",
+  hobbies: ["gym", "programar"],
+  direccion: {
+    ciudad: "Madrid",
+    pais: "España"
+  }
+};
+    </pre>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Métodos (funciones dentro de objetos)</h3>
+
+    <pre>
+let persona = {
+  nombre: "Mauro",
+  saludar: function() {
+    console.log("Hola!");
+  }
+};
+    </pre>
+
+    <p>
+      Una función dentro de un objeto se llama método.
+    </p>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Cuándo usar objetos</h3>
+
+    <ul>
+      <li>Cuando tienes datos relacionados</li>
+      <li>Para representar entidades (persona, producto, usuario)</li>
+      <li>Cuando necesitas organizar información de forma clara</li>
+    </ul>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Errores comunes</h3>
+
+    <ul>
+      <li>Confundir objetos con arrays</li>
+      <li>Olvidar comas entre propiedades</li>
+      <li>Acceder mal a propiedades (sin comillas en corchetes)</li>
+    </ul>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Resumen</h3>
+
+    <ul>
+      <li>Objeto → conjunto de datos con clave y valor</li>
+      <li>Se accede con punto o corchetes</li>
+      <li>Permite modificar, añadir y eliminar propiedades</li>
+      <li>Puede contener arrays, objetos y funciones</li>
+    </ul>
+  </article>
+
+</section>
+
+    <script src="objetosJs/main.js"></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,19 @@
+/* Los media queries son una parte fundamental de la responsividad en CSS. Permiten aplicar estilos específicos según las características del dispositivo o la ventana del navegador.
+La estructura básica es: @media (condición) {...} */
+
+@media screen and (min-width: 768px) {
+    
+    body{
+        background-color: red;
+    }
+    /* En este ejemplo, el fondo del cuerpo se volverá rojo cuando el ancho de la ventana sea de 768 píxeles o más. Puedes usar diferentes condiciones como min-width, orientation, etc. para adaptar tu diseño a diferentes dispositivos. */
+}
+
+/* Al establecer otro mediaquery con un ancho mayor, esto hará que los estilos que aplicamos en el primer mediaquery se apliquen en todas las ventanas que tengan un ancho de 768 píxeles o más, pero cuando el ancho alcance los 992 píxeles o más, se aplicarán los estilos del segundo mediaquery, sobrescribiendo los del primero. */
+
+@media (min-width:992px) {
+    body{
+        background-color: green;
+    }
+    /* Aquí, el fondo se volverá verde cuando el ancho de la ventana sea de 992 píxeles o más. Esto es útil para aplicar estilos específicos a pantallas más grandes, como computadoras de escritorio. */
+}

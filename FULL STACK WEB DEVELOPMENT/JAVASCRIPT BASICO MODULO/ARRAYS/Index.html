@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAYS</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<!--Documentación de interés
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array -->
+
+<body>
+    <section>
+  <h2>Arrays en JavaScript</h2>
+
+  <p>
+    Un array es una estructura de datos que permite almacenar múltiples valores
+    dentro de una sola variable.
+  </p>
+
+  <article>
+    <h3>¿Qué es un array?</h3>
+
+    <p>
+      Es una lista de elementos que se pueden recorrer y manipular fácilmente.
+    </p>
+
+    <pre>
+let numeros = [1, 2, 3, 4];
+let nombres = ["Mauro", "Juan", "Ana"];
+    </pre>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Índices (posiciones)</h3>
+
+    <p>
+      Cada elemento del array tiene una posición llamada índice. 
+      Los índices comienzan en 0.
+    </p>
+
+    <pre>
+let nombres = ["Mauro", "Juan", "Ana"];
+
+console.log(nombres[0]); // Mauro
+console.log(nombres[1]); // Juan
+    </pre>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Propiedad length</h3>
+
+    <p>
+      La propiedad <strong>length</strong> indica la cantidad de elementos del array.
+    </p>
+
+    <pre>
+let nombres = ["Mauro", "Juan", "Ana"];
+
+console.log(nombres.length); // 3
+    </pre>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Recorrer un array</h3>
+
+    <p>
+      Se puede recorrer un array utilizando un bucle <strong>for</strong>.
+    </p>
+
+    <pre>
+let nombres = ["Mauro", "Juan", "Ana"];
+
+for (let i = 0; i < nombres.length; i++) {
+  console.log(nombres[i]);
+}
+    </pre>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Modificar arrays</h3>
+
+    <h4>Añadir elementos</h4>
+    <pre>
+nombres.push("Luis");
+    </pre>
+
+    <h4>Eliminar el último elemento</h4>
+    <pre>
+nombres.pop();
+    </pre>
+
+    <h4>Modificar un valor</h4>
+    <pre>
+nombres[0] = "Pedro";
+    </pre>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Tipos de datos en arrays</h3>
+
+    <p>
+      Un array puede contener diferentes tipos de datos.
+    </p>
+
+    <pre>
+let mezcla = ["Mauro", 25, true];
+    </pre>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Cuándo usar arrays</h3>
+
+    <ul>
+      <li>Cuando trabajas con listas de datos</li>
+      <li>Cuando necesitas agrupar información</li>
+      <li>Cuando vas a recorrer múltiples valores</li>
+    </ul>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Errores comunes</h3>
+
+    <ul>
+      <li>Pensar que los índices empiezan en 1</li>
+      <li>Olvidar usar <strong>.length</strong> en bucles</li>
+      <li>No entender qué contiene el array</li>
+    </ul>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Resumen</h3>
+
+    <ul>
+      <li>Array → lista de datos</li>
+      <li>Índice → posición del elemento</li>
+      <li>length → número de elementos</li>
+      <li>for → recorrer el array</li>
+    </ul>
+  </article>
+
+</section>
+
+    <script src="arraysJs/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPLICACIÓN JAVASCRIPT</title>
+    <link rel="stylesheet" href="">
+</head>
+      <!--DOCUMENTACIÓN DE OBJETO MATH EN JAVASCRIPT:
+      https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math -->
+
+<body>
+    <section>
+  <h2>Introducción a JavaScript</h2>
+
+  <p>
+    JavaScript es un lenguaje de programación que permite añadir interactividad
+    a una página web. Gracias a JavaScript, las webs dejan de ser estáticas y
+    pasan a responder a las acciones del usuario.
+  </p>
+
+  <article>
+    <h3>¿Para qué sirve JavaScript?</h3>
+    <ul>
+      <li>Crear interactividad en la web</li>
+      <li>Responder a acciones del usuario</li>
+      <li>Modificar el contenido HTML</li>
+      <li>Cambiar estilos CSS dinámicamente</li>
+    </ul>
+  </article>
+
+  <article>
+    <h3>Relación con HTML y CSS</h3>
+    <ul>
+      <li>HTML → estructura</li>
+      <li>CSS → diseño</li>
+      <li>JavaScript → comportamiento</li>
+    </ul>
+  </article>
+
+  <article>
+    <h3>Variables</h3>
+    <p>
+      Las variables permiten guardar información para utilizarla más adelante.
+    </p>
+
+    <pre>
+let nombre = "Mauro";
+let edad = 25;
+    </pre>
+
+    <ul>
+      <li>string → texto</li>
+      <li>number → números</li>
+      <li>boolean → verdadero o falso</li>
+    </ul>
+  </article>
+
+  <article>
+    <h3>Condicionales</h3>
+    <p>
+      Permiten tomar decisiones en función de una condición.
+    </p>
+
+    <pre>
+if (edad > 18) {
+  console.log("Eres mayor de edad");
+}
+    </pre>
+  </article>
+
+  <article>
+    <h3>Bucles</h3>
+    <p>
+      Permiten repetir un bloque de código varias veces.
+    </p>
+
+    <pre>
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+    </pre>
+  </article>
+
+  <article>
+    <h3>Funciones</h3>
+    <p>
+      Son bloques de código reutilizables que se pueden ejecutar cuando se necesiten.
+    </p>
+
+    <pre>
+function saludar() {
+  console.log("Hola!");
+}
+
+saludar();
+    </pre>
+  </article>
+
+  <article>
+    <h3>DOM (Document Object Model)</h3>
+    <p>
+      El DOM permite a JavaScript interactuar con el HTML.
+    </p>
+
+    <pre>
+&lt;p id="texto"&gt;Hola&lt;/p&gt;
+
+document.getElementById("texto").textContent = "Adiós";
+    </pre>
+
+    <p>
+      Permite modificar contenido, estilos y estructura de la página.
+    </p>
+  </article>
+
+  <article>
+    <h3>Eventos</h3>
+    <p>
+      Permiten ejecutar código cuando el usuario realiza una acción.
+    </p>
+
+    <pre>
+let boton = document.querySelector("button");
+
+boton.addEventListener("click", function() {
+  console.log("Has hecho click");
+});
+    </pre>
+  </article>
+
+  <article>
+    <h3>Manipulación del DOM</h3>
+    <ul>
+      <li>Cambiar texto</li>
+      <li>Cambiar estilos</li>
+      <li>Crear elementos</li>
+      <li>Eliminar elementos</li>
+    </ul>
+
+    <pre>
+document.body.style.background = "black";
+    </pre>
+  </article>
+
+  <article>
+    <h3>Errores comunes</h3>
+    <ul>
+      <li>No enlazar el archivo JavaScript</li>
+      <li>No entender el DOM</li>
+      <li>Errores de sintaxis</li>
+      <li>Intentar aprender todo de golpe</li>
+    </ul>
+  </article>
+
+  <article>
+    <h3>Consejo clave</h3>
+    <p>
+      Practica constantemente. Usa la consola del navegador (F12) para probar código,
+      cometer errores y aprender de ellos.
+    </p>
+  </article>
+
+</section>
+
+<!--PSEUDOCÓDIGO Y DIAGRAMAS DE FLUJO-->
+
+<section>
+  <h2>Pseudocódigo y Diagramas de Flujo</h2>
+
+  <p>
+    El pseudocódigo y los diagramas de flujo son herramientas que permiten
+    planificar y entender la lógica de un programa antes de escribir código real.
+  </p>
+
+  <!-- PSEUDOCÓDIGO -->
+  <article>
+    <h3>¿Qué es el pseudocódigo?</h3>
+
+    <p>
+      Es una forma de escribir la lógica de un programa utilizando lenguaje natural,
+      sin necesidad de seguir la sintaxis de un lenguaje de programación.
+    </p>
+
+    <p>
+      Su objetivo es centrarse en la lógica y no en el código.
+    </p>
+
+    <h4>Ejemplo</h4>
+    <pre>
+INICIO
+
+pedir edad
+
+SI edad >= 18 ENTONCES
+    mostrar "Eres mayor de edad"
+SINO
+    mostrar "Eres menor de edad"
+
+FIN
+    </pre>
+  </article>
+
+  <hr>
+
+  <!-- UTILIDAD -->
+  <article>
+    <h3>¿Para qué sirve?</h3>
+    <ul>
+      <li>Organizar ideas antes de programar</li>
+      <li>Evitar errores</li>
+      <li>Entender problemas complejos</li>
+      <li>Planificar soluciones</li>
+    </ul>
+  </article>
+
+  <hr>
+
+  <!-- DIAGRAMAS -->
+  <article>
+    <h3>¿Qué es un diagrama de flujo?</h3>
+
+    <p>
+      Es una representación visual de un proceso mediante símbolos y flechas.
+    </p>
+
+    <h4>Elementos básicos</h4>
+    <ul>
+      <li>Óvalo → Inicio / Fin</li>
+      <li>Rectángulo → Acción</li>
+      <li>Rombo → Decisión</li>
+      <li>Flechas → Dirección del flujo</li>
+    </ul>
+
+    <h4>Ejemplo</h4>
+    <pre>
+[Inicio]
+   ↓
+[Pedir edad]
+   ↓
+¿edad >= 18?
+   ↓        ↓
+Sí         No
+↓           ↓
+[Mayor]   [Menor]
+   ↓
+[Fin]
+    </pre>
+  </article>
+
+  <hr>
+
+  <!-- DIFERENCIAS -->
+  <article>
+    <h3>Diferencias</h3>
+    <ul>
+      <li>Pseudocódigo → texto</li>
+      <li>Diagrama de flujo → visual</li>
+      <li>Pseudocódigo → rápido de escribir</li>
+      <li>Diagrama → más fácil de entender</li>
+    </ul>
+  </article>
+
+  <hr>
+
+  <!-- USO -->
+  <article>
+    <h3>Cómo utilizarlos correctamente</h3>
+    <ol>
+      <li>Entender el problema</li>
+      <li>Escribir el pseudocódigo</li>
+      <li>(Opcional) crear diagrama de flujo</li>
+      <li>Convertirlo a código</li>
+    </ol>
+  </article>
+
+  <hr>
+
+  <!-- EJEMPLO PRACTICO -->
+  <article>
+    <h3>Ejemplo práctico</h3>
+
+    <h4>Pseudocódigo</h4>
+    <pre>
+INICIO
+
+para i desde 1 hasta 5
+    mostrar i
+
+FIN
+    </pre>
+
+    <h4>JavaScript</h4>
+    <pre>
+for (let i = 1; i <= 5; i++) {
+  console.log(i);
+}
+    </pre>
+  </article>
+
+  <hr>
+
+  <!-- TRADUCCIÓN -->
+  <article>
+    <h3>Traducción a JavaScript</h3>
+    <ul>
+      <li>SI → if</li>
+      <li>SINO → else</li>
+      <li>PARA → for</li>
+      <li>MIENTRAS → while</li>
+      <li>MOSTRAR → console.log</li>
+    </ul>
+  </article>
+
+  <hr>
+
+  <!-- EJEMPLO REAL -->
+  <article>
+    <h3>Ejemplo real</h3>
+
+    <p>Problema: Contador con botón</p>
+
+    <h4>Pseudocódigo</h4>
+    <pre>
+INICIO
+
+contador = 0
+
+cuando el usuario haga click:
+    contador = contador + 1
+    mostrar contador
+
+FIN
+    </pre>
+  </article>
+
+  <hr>
+
+  <!-- ERRORES -->
+  <article>
+    <h3>Errores comunes</h3>
+    <ul>
+      <li>Empezar a programar sin planificar</li>
+      <li>No definir bien el problema</li>
+      <li>Confundir lógica con sintaxis</li>
+    </ul>
+  </article>
+
+  <hr>
+
+  <!-- CONSEJO -->
+  <article>
+    <h3>Consejo clave</h3>
+    <p>
+      Si no sabes cómo programar algo, escríbelo primero en pseudocódigo.
+      Esto te ayudará a entender la lógica antes de pasar a JavaScript.
+    </p>
+  </article>
+
+</section>
+
+</body>
+</html>

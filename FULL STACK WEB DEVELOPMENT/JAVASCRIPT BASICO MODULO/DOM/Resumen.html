@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUMEN DOM</title>
+    <link rel="stylesheet" href="">
+</head>
+      <!-- DOCUMENTTACIÓN DE INTERÉS:
+       https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction -->
+<body>
+    <section>
+    <h2>DOM (Document Object Model)</h2>
+
+    <p>
+        El DOM es la forma en la que el navegador representa el HTML como una estructura de objetos.
+        Permite a JavaScript interactuar con los elementos de una página web.
+    </p>
+
+    <article>
+        <h3>¿Qué es el DOM?</h3>
+
+        <p>
+        El DOM convierte el HTML en una estructura jerárquica que JavaScript puede leer y modificar.
+        </p>
+
+        <pre>
+    document
+    └── body
+        └── p
+            └── "Hola"
+        </pre>
+    </article>
+
+    <hr>
+
+    <article>
+        <h3>Objeto document</h3>
+
+        <p>
+        El objeto <strong>document</strong> representa toda la página web y es el punto de acceso al DOM.
+        </p>
+
+        <pre>
+    document
+        </pre>
+    </article>
+
+    <hr>
+
+    <article>
+        <h3>Seleccionar elementos</h3>
+
+        <h4>Por ID</h4>
+        <pre>
+    document.getElementById("miId");
+        </pre>
+
+        <h4>Con querySelector</h4>
+        <pre>
+    document.querySelector(".clase");
+    document.querySelector("p");
+        </pre>
+    </article>
+
+    <hr>
+
+    <article>
+        <h3>Modificar contenido</h3>
+
+        <pre>
+    elemento.textContent = "Nuevo texto";
+        </pre>
+    </article>
+
+    <hr>
+
+    <article>
+        <h3>Modificar estilos</h3>
+
+        <pre>
+    elemento.style.color = "red";
+        </pre>
+    </article>
+
+    <hr>
+
+    <article>
+        <h3>Crear elementos</h3>
+
+        <pre>
+    let nuevo = document.createElement("p");
+    nuevo.textContent = "Hola nuevo";
+        </pre>
+    </article>
+
+    <hr>
+
+    <article>
+        <h3>Eliminar elementos</h3>
+
+        <pre>
+    elemento.remove();
+        </pre>
+    </article>
+
+    <hr>
+
+    <article>
+        <h3>Eventos</h3>
+
+        <p>
+        Los eventos permiten ejecutar código cuando el usuario interactúa con la página.
+        </p>
+
+        <pre>
+    elemento.addEventListener("click", function() {
+    console.log("Click!");
+    });
+        </pre>
+    </article>
+
+    <hr>
+
+    <article>
+        <h3>Funcionamiento general</h3>
+
+        <ol>
+        <li>El usuario realiza una acción</li>
+        <li>JavaScript detecta el evento</li>
+        <li>Se ejecuta código</li>
+        <li>El DOM se modifica</li>
+        </ol>
+    </article>
+
+    <hr>
+
+    <article>
+        <h3>Ejemplo práctico</h3>
+
+        <pre>
+    let boton = document.querySelector("button");
+
+    boton.addEventListener("click", function() {
+    document.body.style.background = "black";
+    });
+        </pre>
+    </article>
+
+    <hr>
+
+    <article>
+        <h3>Errores comunes</h3>
+
+        <ul>
+        <li>No conectar correctamente JavaScript con HTML</li>
+        <li>Seleccionar mal los elementos</li>
+        <li>Ejecutar código antes de que cargue el DOM</li>
+        </ul>
+    </article>
+
+    <hr>
+
+    <article>
+        <h3>Resumen</h3>
+
+        <ul>
+        <li>DOM → representación del HTML como objetos</li>
+        <li>document → acceso principal al DOM</li>
+        <li>Permite seleccionar, modificar, crear y eliminar elementos</li>
+        <li>Eventos → interacción con el usuario</li>
+        </ul>
+    </article>
+
+    </section>
+
+    <script src=""></script>
+</body>
+</html>
