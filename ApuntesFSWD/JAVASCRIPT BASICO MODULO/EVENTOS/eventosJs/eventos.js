@@ -1,4 +1,8 @@
-/* --- CREAR EVENTO ---*/
+/* --- CREAR EVENTO ---
+
+     variable.addEventListener('evento', function() {});
+
+*/
 
 //AddEventListener es el atributo que nos permite crear un evento
 
@@ -38,3 +42,12 @@ caja.addEventListener('click', (ev) => {
 
 
 /*--- DELEGACIÓN DE EVENTOS ---*/
+const hijos = document.querySelectorAll('#caja >*'); //Seleccionamos todos los elementos hijos de la caja
+// Esto nos da un Node list que contiene todos los elementos hijos de la caja.
+
+hijos.forEach((hijo) => {
+    hijo.addEventListener('click', () => {
+        mostrarMensaje(`click en ${hijo.id}`);
+    })
+})
+// Aqui hemos creado un evento que se ve aplicado en todos los elementos hijos de la caja. Sin necesidad de crear un evento para cada uno de ellos.

@@ -75,7 +75,7 @@ const pintarGaleria = () => {
         const pieDeFoto = document.createElement ('figcaption')
         pieDeFoto.textContent = item.pie_de_foto
 
-        cajaImagen.append(imagen, pieDeFoto)
+        cajaImagen.append(imagen, pieDeFoto) // App
         galeria.append(cajaImagen)
     })
 }
