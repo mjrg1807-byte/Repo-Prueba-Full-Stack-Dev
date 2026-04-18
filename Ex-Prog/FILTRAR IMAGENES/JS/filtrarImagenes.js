@@ -67,6 +67,8 @@ let fotosVolcan = [
 // FUNCIONES Y EVENTOS
 
 const pintarImagenes = (paquete) => {
+    main.innerHTML = ''
+    
     paquete.forEach(item => {
         const imagen = document.createElement ('img')
         imagen.src = item.src
